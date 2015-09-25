@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVD-iq-acm">
+                                <rect key="frame" x="0.0" y="66" width="320" height="502"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XwU-74-i2c">
+                                <rect key="frame" x="0.0" y="20" width="320" height="46"/>
+                                <items>
+                                    <navigationItem title="进度条测试" id="Ats-9c-86H">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="kvm-Of-LRd">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QKl-0p-z4j">
+                                                <rect key="frame" x="233" y="9" width="71" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="zC0-5U-0jw" kind="modal" id="TH5-jG-4QI"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iVD-iq-acm" secondAttribute="trailing" id="2N6-21-mhQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="iVD-iq-acm" secondAttribute="bottom" id="7nQ-Ma-zsp"/>
+                            <constraint firstItem="iVD-iq-acm" firstAttribute="top" secondItem="XwU-74-i2c" secondAttribute="bottom" id="JTg-ZX-Vnv"/>
+                            <constraint firstItem="iVD-iq-acm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Lug-1y-Qy5"/>
+                            <constraint firstItem="XwU-74-i2c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Oq3-fc-HLu"/>
+                            <constraint firstAttribute="trailing" secondItem="XwU-74-i2c" secondAttribute="trailing" id="Pd8-in-kZs"/>
+                            <constraint firstItem="iVD-iq-acm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="66" id="biY-x3-9IJ"/>
+                            <constraint firstItem="XwU-74-i2c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="c4k-WY-Kgu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="testWebview" destination="iVD-iq-acm" id="9o2-3f-gpo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="163"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="gRW-sV-c9V">
+            <objects>
+                <viewController id="zC0-5U-0jw" customClass="testViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y0b-nk-F7E"/>
+                        <viewControllerLayoutGuide type="bottom" id="Avc-re-IE5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="THp-gT-Hxg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hli-jx-lPH">
+                                <rect key="frame" x="223" y="62" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonClick:" destination="zC0-5U-0jw" eventType="touchUpInside" id="TCl-cU-pmn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4UQ-nu-LNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="543" y="163"/>
+        </scene>
+    </scenes>
+</document>
